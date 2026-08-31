@@ -1,0 +1,2190 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#0F172A;
+    color:white;
+
+}
+
+/* Navigation */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:22px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#111827;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#38BDF8;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    background:#38BDF8;
+
+    transition:.35s;
+
+    border-radius:5px;
+
+}
+
+.nav-links a:hover{
+
+    color:#38BDF8;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero{
+
+    min-height:100vh;
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:80px;
+
+    padding-top:100px;
+
+}
+
+.hero-text{
+
+    flex:1;
+
+}
+
+.hello{
+
+    font-size:22px;
+    color:#CBD5E1;
+    margin-bottom:15px;
+
+}
+
+.hero h1{
+
+    font-size:68px;
+    line-height:1.1;
+    margin-bottom:20px;
+
+}
+
+.hero h2{
+
+    font-size:34px;
+    color:#38BDF8;
+    margin-bottom:25px;
+
+}
+
+.description{
+
+    font-size:20px;
+    line-height:1.8;
+    color:#CBD5E1;
+    margin-bottom:40px;
+
+}
+
+/* ==========================
+   HERO BUTTONS
+========================== */
+
+.hero-buttons{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    margin-top:35px;
+
+    flex-wrap:nowrap;
+
+}
+
+.hero-buttons a{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:165px;
+    height:60px;
+
+    text-decoration:none;
+
+    color:white;
+    font-size:18px;
+    font-weight:500;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.hero-buttons a:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* Individual Button Colors */
+
+.btn-secondary{
+
+    background:#2563EB;
+
+}
+
+.btn-success{
+
+    background:#16A34A;
+
+}
+
+.btn-primary{
+
+    background:#38BDF8;
+
+}
+
+.btn-secondary:hover{
+
+    background:#1D4ED8;
+
+}
+
+.btn-success:hover{
+
+    background:#15803D;
+
+}
+
+.btn-primary:hover{
+
+    background:#0EA5E9;
+
+}
+
+/* ==========================
+   HERO IMAGE
+========================== */
+
+.hero-image{
+
+    flex:1;
+    display:flex;
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:360px;
+
+    border-radius:25px;
+
+    border:5px solid #38BDF8;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    transition:.4s;
+
+}
+
+.hero-image img:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+    box-shadow:0 25px 60px rgba(56,189,248,.3);
+
+}
+
+/* ==========================
+   PROJECTS SECTION
+========================== */
+
+.projects{
+
+    padding:120px 8%;
+
+    background:#111827;
+
+    text-align:center;
+
+}
+
+.section-title{
+
+    font-size:54px;
+
+    color:#38BDF8;
+
+    margin-bottom:25px;
+
+}
+
+.projects-description{
+
+    max-width:850px;
+
+    margin:0 auto 60px;
+
+    font-size:20px;
+
+    color:#CBD5E1;
+
+    line-height:1.8;
+
+}
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+}
+
+.project-card{
+
+    background:#1E293B;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    transition:.35s;
+
+    border:1px solid transparent;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#38BDF8;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.project-icon{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.project-card h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.project-card p{
+
+    color:#CBD5E1;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+}
+
+.tech-stack{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+
+}
+
+.tech-stack span{
+
+    background:#334155;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+}
+
+.project-btn{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.project-btn:hover{
+
+    background:#1D4ED8;
+
+}
+
+/* ==========================
+   CERTIFICATES
+========================== */
+
+.certificates{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:100px auto;
+
+}
+
+.certificate-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.certificate-card{
+
+    background:#1E293B;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    min-height:360px;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.certificate-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.certificate-icon{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.certificate-card h3{
+
+    font-size:28px;
+
+    margin-bottom:12px;
+
+}
+
+.certificate-card p{
+
+    color:#CBD5E1;
+
+    line-height:1.7;
+
+    margin:18px 0;
+
+}
+
+/* ==========================
+   STATUS BADGES
+========================== */
+
+.status{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.completed{
+
+    background:#16A34A;
+
+}
+
+.in-progress{
+
+    background:#2563EB;
+
+}
+
+.pending{
+
+    background:#64748B;
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.certificate-card button{
+
+    margin-top:20px;
+
+    padding:14px 26px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#334155;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:16px;
+
+}
+
+.certificate-card button:hover:not(:disabled){
+
+    background:#38BDF8;
+
+}
+
+.certificate-card button:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.6;
+
+}
+
+
+/* ==========================
+   CERTIFICATE POPUP
+========================== */
+
+.certificate-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:10000;
+
+    padding:30px;
+
+    background:rgba(2, 6, 23, .88);
+
+    backdrop-filter:blur(6px);
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow-y:auto;
+
+}
+
+.certificate-modal.open{
+
+    display:flex;
+
+}
+
+.certificate-modal-content{
+
+    position:relative;
+
+    width:min(1000px, 95vw);
+
+    max-height:92vh;
+
+    padding:30px;
+
+    background:#1E293B;
+
+    border:1px solid rgba(56, 189, 248, .35);
+
+    border-radius:20px;
+
+    box-shadow:0 25px 70px rgba(0, 0, 0, .55);
+
+    text-align:center;
+
+    animation:certificatePopup .3s ease;
+
+}
+
+.certificate-modal-content h2{
+
+    padding:0 45px;
+
+    margin-bottom:22px;
+
+    color:#38BDF8;
+
+    font-size:26px;
+
+}
+
+.certificate-preview{
+
+    max-height:75vh;
+
+    overflow:auto;
+
+    border-radius:12px;
+
+    background:#0F172A;
+
+}
+
+.certificate-preview img{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+}
+
+.certificate-close{
+
+    position:absolute;
+
+    top:14px;
+
+    right:18px;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#334155;
+
+    color:white;
+
+    font-size:30px;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.certificate-close:hover{
+
+    background:#EF4444;
+
+    transform:rotate(90deg);
+
+}
+
+body.modal-open{
+
+    overflow:hidden;
+
+}
+
+@keyframes certificatePopup{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px) scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/* ==========================
+   CONTACT MODAL
+========================== */
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    z-index:9999;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.75);
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.modal-content{
+
+    background:#1E293B;
+
+    width:90%;
+
+    max-width:650px;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    position:relative;
+
+    animation:popup .3s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.8);
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+        opacity:1;
+
+    }
+
+}
+
+.close{
+
+    position:absolute;
+
+    right:25px;
+
+    top:18px;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+}
+
+.modal-content h2{
+
+    color:#38BDF8;
+
+    margin-bottom:10px;
+
+}
+
+.contact-subtitle{
+
+    color:#CBD5E1;
+
+    margin-bottom:35px;
+
+    line-height:1.7;
+
+}
+
+.contact-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.contact-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:#334155;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateX(8px);
+
+}
+
+.contact-card span{
+
+    font-size:34px;
+
+}
+
+.contact-card h3{
+
+    margin-bottom:5px;
+
+}
+
+.contact-card p{
+
+    color:#CBD5E1;
+
+}
+
+/* ==========================
+   SCROLL ANIMATIONS
+========================== */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:all .8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+.dashboard{
+
+    padding:70px 8%;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.dashboard-card{
+
+    background:#1E293B;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    border:1px solid transparent;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#38BDF8;
+
+    box-shadow:0 20px 45px rgba(56,189,248,.25);
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+    border-color:#38BDF8;
+
+    box-shadow:0 20px 45px rgba(56,189,248,.2);
+
+}
+
+.dashboard-card h2{
+
+    color:#38BDF8;
+
+    font-size:48px;
+
+    margin-bottom:15px;
+
+}
+
+.dashboard-card p{
+
+    color:#CBD5E1;
+
+    font-size:18px;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+
+    background:#111827;
+
+    padding:80px 10%;
+
+    text-align:center;
+
+}
+
+.footer h2{
+
+    color:#38BDF8;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+.footer p{
+
+    color:#CBD5E1;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.footer-links{
+
+    margin:40px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    background:#1E293B;
+
+    padding:15px 30px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    background:#38BDF8;
+
+    transform:translateY(-5px);
+
+}
+
+.footer hr{
+
+    margin:50px auto;
+
+    border:none;
+
+    height:1px;
+
+    background:#334155;
+
+    width:80%;
+
+}
+
+.copyright{
+
+    color:#94A3B8;
+
+}
+
+.copyright span{
+
+    color:#38BDF8;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   PAGE HERO
+========================== */
+
+.page-hero{
+
+    min-height:45vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:#0F172A;
+
+}
+
+.page-hero h1{
+
+    font-size:70px;
+
+    color:#38BDF8;
+
+    margin-bottom:20px;
+
+}
+
+.page-hero p{
+
+    font-size:22px;
+
+    color:#CBD5E1;
+
+}
+
+/* ==========================
+   ABOUT PAGE
+========================== */
+
+.about-hero{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:0 auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    gap:70px;
+
+    padding:140px 0 100px;
+
+}
+
+.about-profile{
+
+    width:340px;
+
+    background:#1E293B;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.about-profile img{
+
+    width:100%;
+
+    border-radius:15px;
+
+    border:5px solid #38BDF8;
+
+    margin-bottom:25px;
+
+}
+
+.about-profile h2{
+
+    margin-bottom:10px;
+
+}
+
+.about-profile h3{
+
+    color:#38BDF8;
+
+    margin-bottom:8px;
+
+}
+
+.about-profile p{
+
+    color:#CBD5E1;
+
+}
+
+.about-intro{
+
+    flex:1;
+
+}
+
+.about-intro h1{
+
+    font-size:52px;
+
+    color:#38BDF8;
+
+    margin-bottom:25px;
+
+}
+
+.about-intro p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#CBD5E1;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================
+   EDUCATION
+========================== */
+
+.education{
+
+    width:90%;
+    max-width:1200px;
+    margin:80px auto;
+
+}
+
+.section-title{
+
+    font-size:48px;
+    color:#38BDF8;
+    text-align:center;
+    margin-bottom:50px;
+
+}
+
+.education-card{
+
+    background:#1E293B;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+}
+
+.education-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.education-card h3{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.education-card h4{
+
+    color:#38BDF8;
+
+    margin-bottom:15px;
+
+}
+
+.education-card p{
+
+    color:#CBD5E1;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+   TECHNICAL SKILLS
+========================== */
+
+.skills-section{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:90px auto;
+
+}
+
+.skills-container{
+
+    background:#1E293B;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.skill{
+
+    margin-bottom:30px;
+
+}
+
+.skill:last-child{
+
+    margin-bottom:0;
+
+}
+
+.skill span{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:20px;
+
+    font-weight:500;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:22px;
+
+    background:#334155;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    padding-right:15px;
+
+    color:white;
+
+    font-weight:600;
+
+    border-radius:30px;
+
+    background:#38BDF8;
+
+}
+
+/* Skill Percentages */
+
+.sql{
+
+    width:70%;
+
+}
+
+.powerbi{
+
+    width:30%;
+
+}
+
+.excel{
+
+    width:80%;
+
+}
+
+.htmlcss{
+
+    width:45%;
+
+}
+
+.github{
+
+    width:40%;
+
+}
+
+/* ==========================
+   PROFESSIONAL SKILLS
+========================== */
+
+.professional-skills{
+
+    width:90%;
+    max-width:1200px;
+    margin:90px auto;
+
+}
+
+.professional-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.pro-card{
+
+    background:#1E293B;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.pro-card:hover{
+
+    transform:translateY(-8px);
+
+    border:1px solid #38BDF8;
+
+}
+
+.pro-card h3{
+
+    color:#38BDF8;
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+.pro-card p{
+
+    color:#CBD5E1;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+/* ==========================
+   CAREER OBJECTIVE
+========================== */
+
+.career-goal{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:90px auto 120px;
+
+}
+
+.goal-card{
+
+    background:#1E293B;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    transition:.35s;
+
+}
+
+.goal-card:hover{
+
+    transform:translateY(-8px);
+
+    border:1px solid #38BDF8;
+
+}
+
+.goal-card h3{
+
+    color:#38BDF8;
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+}
+
+.goal-card p{
+
+    color:#CBD5E1;
+
+    font-size:19px;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+.goal-card p:last-child{
+
+    margin-bottom:0;
+
+}
+
+/* ==========================
+   CERTIFICATE MODAL
+========================== */
+
+.certificate-modal{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.85);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.certificate-modal-content{
+
+    position:relative;
+
+    max-width:900px;
+
+    width:90%;
+
+    background:#1E293B;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    animation:fadeIn .3s ease;
+
+}
+
+.certificate-modal-content img{
+
+    width:100%;
+
+    max-height:80vh;
+
+    object-fit:contain;
+
+    border-radius:10px;
+
+}
+
+.certificate-close{
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    font-size:38px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.certificate-close:hover{
+
+    color:#38BDF8;
+
+}
+
+.certificate-modal-content h2{
+
+    color:#38BDF8;
+
+    margin-bottom:20px;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* =====================================================
+   EXPERIENCE PAGE
+   Used by: experience.html
+===================================================== */
+
+
+/* =====================================================
+   EXPERIENCE PAGE HEADER
+===================================================== */
+
+.experience-header{
+    width:90%;
+    max-width:1000px;
+    margin:0 auto;
+    padding-top:160px;
+    padding-bottom:70px;
+    text-align:center;
+}
+
+.experience-label{
+    color:#38BDF8;
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.experience-header h1{
+    font-size:56px;
+    margin-bottom:25px;
+    color:white;
+}
+
+.experience-header > p:last-child{
+    max-width:800px;
+    margin:auto;
+    color:#CBD5E1;
+    font-size:19px;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   EXPERIENCE TIMELINE
+
+   1. Brother
+      Quality Assurance Engineer
+
+   2. FAST Services Corporation
+      Site Mentor / Industrial Engineer
+
+   3. FAST Services Corporation
+      Education and Training
+
+   4. Orkestra Communications
+      Data Research Analyst (OJT)
+===================================================== */
+
+.experience-section{
+    width:90%;
+    max-width:1100px;
+    margin:0 auto 120px;
+}
+
+.experience-timeline{
+    position:relative;
+    padding-left:60px;
+}
+
+
+/* Vertical Timeline Line */
+
+.experience-timeline::before{
+    content:"";
+    position:absolute;
+    left:15px;
+    top:10px;
+    bottom:10px;
+    width:3px;
+    background:#334155;
+    border-radius:10px;
+}
+
+
+/* =====================================================
+   INDIVIDUAL EXPERIENCE ITEM
+===================================================== */
+
+.experience-item{
+    position:relative;
+    margin-bottom:55px;
+}
+
+.experience-item:last-child{
+    margin-bottom:0;
+}
+
+
+/* Timeline Circle */
+
+.timeline-marker{
+    position:absolute;
+    left:-53px;
+    top:30px;
+
+    width:18px;
+    height:18px;
+
+    background:#38BDF8;
+
+    border:4px solid #0F172A;
+    border-radius:50%;
+
+    box-shadow:
+        0 0 0 3px #38BDF8,
+        0 0 20px rgba(56,189,248,.5);
+
+    z-index:2;
+}
+
+
+/* =====================================================
+   EXPERIENCE CARD
+
+   Used by all experience cards:
+   - Brother
+   - FAST Site Mentor
+   - FAST Education and Training
+   - Orkestra
+===================================================== */
+
+.experience-card{
+    background:#1E293B;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    border:1px solid transparent;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+    transition:.35s;
+}
+
+
+/* Experience Card Hover */
+
+.experience-card:hover{
+    transform:translateY(-7px);
+
+    border-color:#38BDF8;
+
+    box-shadow:
+        0 20px 45px rgba(56,189,248,.15);
+}
+
+
+/* =====================================================
+   EXPERIENCE CARD HEADER
+===================================================== */
+
+.experience-card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    gap:30px;
+
+    margin-bottom:25px;
+}
+
+
+/* Employment Date */
+
+.experience-date{
+    display:inline-block;
+
+    background:#0F172A;
+    color:#38BDF8;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:14px;
+    font-weight:600;
+
+    margin-bottom:15px;
+}
+
+
+/* Job Title */
+
+.experience-card h2{
+    font-size:30px;
+    color:white;
+    margin-bottom:8px;
+}
+
+
+/* Company Name */
+
+.experience-card h3{
+    font-size:19px;
+    color:#38BDF8;
+    font-weight:500;
+}
+
+
+/* =====================================================
+   EXPERIENCE ICONS
+
+   Brother
+   ⚙️
+
+   FAST Site Mentor
+   📊
+
+   FAST Education and Training
+   📋
+
+   Orkestra
+   🔎
+===================================================== */
+
+.experience-icon{
+    min-width:65px;
+    width:65px;
+    height:65px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#0F172A;
+
+    border-radius:15px;
+
+    font-size:30px;
+
+    flex-shrink:0;
+}
+
+
+/* =====================================================
+   EXPERIENCE SUMMARY
+===================================================== */
+
+.experience-summary{
+    color:#CBD5E1;
+
+    font-size:17px;
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+    padding-bottom:25px;
+
+    border-bottom:1px solid #334155;
+}
+
+
+/* Key Responsibilities Heading */
+
+.experience-card h4{
+    color:white;
+
+    font-size:18px;
+
+    margin-bottom:18px;
+}
+
+
+/* =====================================================
+   KEY RESPONSIBILITIES
+===================================================== */
+
+.experience-list{
+    padding-left:22px;
+
+    /*
+       This creates consistent space between
+       responsibilities and skill tags.
+    */
+
+    margin-bottom:35px;
+}
+
+.experience-list li{
+    color:#CBD5E1;
+
+    font-size:16px;
+    line-height:1.8;
+
+    margin-bottom:12px;
+
+    padding-left:5px;
+}
+
+
+/* Remove unnecessary bottom margin
+   from the final responsibility */
+
+.experience-list li:last-child{
+    margin-bottom:0;
+}
+
+
+/* Blue Bullet Points */
+
+.experience-list li::marker{
+    color:#38BDF8;
+}
+
+
+/* =====================================================
+   EXPERIENCE SKILL TAGS
+===================================================== */
+
+.experience-skills{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    /*
+       Prevents inherited margins from creating
+       inconsistent spacing between cards.
+    */
+
+    margin-top:0;
+}
+
+
+/* Individual Skill Tag */
+
+.experience-skills span{
+    background:#334155;
+
+    color:#E2E8F0;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    transition:.3s;
+}
+
+
+/* Skill Tag Hover */
+
+.experience-skills span:hover{
+    background:#38BDF8;
+
+    color:#0F172A;
+
+    transform:translateY(-2px);
+}
+
+
+/* =====================================================
+   SITE MENTOR SKILLS
+
+   The HTML currently uses:
+
+   <div class="experience-skills site-mentor-skills">
+
+   We don't need additional spacing here anymore because
+   .experience-list handles spacing consistently.
+===================================================== */
+
+.site-mentor-skills{
+    margin-top:0;
+}
+
+
+/* =====================================================
+   RESPONSIVE EXPERIENCE PAGE
+   TABLET / SMALL LAPTOP
+===================================================== */
+
+@media(max-width:768px){
+
+    /* Header */
+
+    .experience-header{
+        padding-top:130px;
+        padding-bottom:50px;
+    }
+
+    .experience-header h1{
+        font-size:42px;
+    }
+
+    .experience-header > p:last-child{
+        font-size:17px;
+    }
+
+
+    /* Timeline */
+
+    .experience-timeline{
+        padding-left:35px;
+    }
+
+    .experience-timeline::before{
+        left:7px;
+    }
+
+    .timeline-marker{
+        left:-35px;
+    }
+
+
+    /* Experience Card */
+
+    .experience-card{
+        padding:28px;
+    }
+
+
+    /* Card Header */
+
+    .experience-card-header{
+        gap:15px;
+    }
+
+    .experience-card h2{
+        font-size:25px;
+    }
+
+
+    /* Experience Icon */
+
+    .experience-icon{
+        min-width:50px;
+        width:50px;
+        height:50px;
+        font-size:24px;
+    }
+
+
+    /* Responsibilities */
+
+    .experience-list{
+        margin-bottom:30px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE EXPERIENCE PAGE
+   MOBILE
+===================================================== */
+
+@media(max-width:520px){
+
+    /* Header */
+
+    .experience-header h1{
+        font-size:36px;
+    }
+
+
+    /* Card Header */
+
+    .experience-card-header{
+        flex-direction:column;
+    }
+
+
+    /* Hide Icons */
+
+    .experience-icon{
+        display:none;
+    }
+
+
+    /* Experience Card */
+
+    .experience-card{
+        padding:24px;
+    }
+
+
+    /* Timeline */
+
+    .experience-timeline{
+        padding-left:28px;
+    }
+
+    .experience-timeline::before{
+        left:4px;
+    }
+
+    .timeline-marker{
+        left:-31px;
+    }
+
+
+    /* Responsibilities */
+
+    .experience-list{
+        margin-bottom:28px;
+    }
+
+
+    /* Skill Tags */
+
+    .experience-skills{
+        gap:8px;
+    }
+
+    .experience-skills span{
+        font-size:12px;
+        padding:7px 12px;
+    }
+
+}
